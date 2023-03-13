@@ -17,6 +17,11 @@ public class FrequencyOfWords {
         //It then loops through each word, checks if it already exists in the linked list,
         //and either increments its frequency or creates a new MyMapNode object for it
         for (String word : words) {
+
+            //Removing the word avoidable from the phrase
+            if (word.equals("avoidable")) {
+                continue;
+            }
             boolean wordFound = false;
             for (MyMapNode<String, Integer> node : list) {
                 if (node.key.equals(word)) {
